@@ -1,0 +1,32 @@
+# Help menu showing all simple commands
+tellraw @s [{"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n","color":"white"}]
+tellraw @s [{"text":"========================================","color":"gold"}]
+tellraw @s [{"text":"           📖 SHOP HELP 📖","color":"aqua","bold":true}]
+tellraw @s [{"text":"========================================","color":"gold"}]
+tellraw @s [{"text":""}]
+tellraw @s [{"text":"💡 Easy Commands:","color":"yellow","bold":true}]
+tellraw @s [{"text":""}]
+tellraw @s [{"text":"  • ","color":"gray"},{"text":"/shop","color":"green","bold":true},{"text":" - Open the shop menu","color":"gray"}]
+tellraw @s [{"text":"    ","color":"gray"},{"text":"[CLICK TO USE]","color":"green","clickEvent":{"action":"run_command","value":"/trigger shop"},"hoverEvent":{"action":"show_text","contents":"Open shop"}}]
+tellraw @s [{"text":""}]
+tellraw @s [{"text":"  • ","color":"gray"},{"text":"Right Click","color":"yellow","bold":true},{"text":" shop item - Open shop","color":"gray"}]
+tellraw @s [{"text":""}]
+tellraw @s [{"text":"  • ","color":"gray"},{"text":"/shop","color":"green","bold":true},{"text":" (if lost item) - Get new one","color":"gray"}]
+tellraw @s [{"text":""}]
+tellraw @s [{"text":"========================================","color":"gold"}]
+tellraw @s [{"text":""}]
+tellraw @s [{"text":"📊 Your Stats:","color":"yellow","bold":true}]
+tellraw @s [{"text":"  💰 Money: ","color":"gray"},{"score":{"name":"@s","objective":"money"},"color":"yellow","bold":true},{"text":" coins","color":"gray"}]
+tellraw @s [{"text":""}]
+tellraw @s [{"text":"========================================","color":"gold"}]
+tellraw @s [{"text":""}]
+tellraw @s [{"text":"💎 Shop Items:","color":"yellow","bold":true}]
+tellraw @s [{"text":"  🥕 Carrot - ","color":"gray"},{"text":"100","color":"gold"},{"text":" coins (Sell: ","color":"gray"},{"text":"20","color":"gold"},{"text":")","color":"gray"}]
+tellraw @s [{"text":"  ⛏️ Coal - ","color":"gray"},{"text":"50","color":"gold"},{"text":" coins (Sell: ","color":"gray"},{"text":"10","color":"gold"},{"text":")","color":"gray"}]
+tellraw @s [{"text":"  🌾 Seeds - ","color":"gray"},{"text":"25","color":"gold"},{"text":" coins (Sell: ","color":"gray"},{"text":"5","color":"gold"},{"text":")","color":"gray"}]
+tellraw @s [{"text":""}]
+tellraw @s [{"text":"========================================","color":"gold"}]
+
+playsound block.note_block.pling master @s ~ ~ ~ 1 1
+scoreboard players set @s help 0
+scoreboard players enable @s help
